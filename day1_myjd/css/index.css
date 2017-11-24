@@ -19,7 +19,7 @@
 	width: 100%;
 	max-width: 640px;
 	min-width: 320px;
-	background: rgb(225,47,50);
+	/*background: rgb(225,47,50);*/
 	position: relative;
 	margin: 0 auto;
 }
@@ -69,10 +69,12 @@
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	
 }
 .jd_banner ul:nth-child(1) {
 	width: 1000%;
+	overflow: hidden;
+	-webkit-transform: translatex(-10%);
+	transform: translateX(-10%); 
 }
 .jd_banner li{
 	float: left;
@@ -106,15 +108,19 @@
 	width: 100%;
 	padding: 10px 0;
 	background: white;
+	border-bottom: 1px solid #eee ;
 }
 .jd_nav li {
 	width: 25%;
 	height: 68px;
 	float: left;
 	text-align: center;
+	margin-top: 2px;
 }
 .jd_nav p {
+	display: block;
 	font-size: 12px;
+	margin: 2px;
 	color: black;
 }
 .jd_nav img {
@@ -124,6 +130,8 @@
 .product_box {
 	background: white;
 	overflow: hidden;
+	border-bottom: 1px solid #eee ;
+	border-top: 1px solid #eee ;
 	
 }
 .product_box_tit {
