@@ -1,0 +1,236 @@
+//变量
+.bigest {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    position: relative;
+    margin: 0 auto;
+}
+//布局
+.jd_layout {
+    .bigest;
+    //      头部搜索栏
+    .jd_header {
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        .jd_header_box {
+            .bigest;
+            background: rgb(225, 47, 50);
+            .icon_logo {
+                position: absolute;
+                width: 60px;
+                height: 36px;
+                background-position: 0 -103px;
+                top: 4px;
+                left: 10px;
+            }
+            form {
+                width: 100%;
+                height: 40px;
+                position: relative;
+                padding-left: 75px;
+                padding-right: 50px;
+                input {
+                    width: 100%;
+                    height: 30px;
+                    border-radius: 15px;
+                    margin-top: 5px;
+                    padding-left: 35px;
+                }
+                .icon_search {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    background-position: -60px -109px;
+                    top: 10px;
+                    left: 85px;
+                }
+            }
+            .login {
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                line-height: 40px;
+                text-align: center;
+                color: white;
+                font-size: 15px;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    ///*轮播图*/
+    .jd_banner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        ul:nth-child(1) {
+            width: 1000%;
+            overflow: hidden;
+            -webkit-transform: translatex(-10%);
+            transform: translateX(-10%);
+            li {
+                float: left;
+                width: 10%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        ul:nth-child(2) {
+            width: 120px;
+            height: 10px;
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            margin-left: -60px;
+            li {
+                float: left;
+                width: 10px;
+                height: 10px;
+                margin-left: 5px;
+                border-radius: 5px;
+                border: 1px solid white;
+                &.now {
+                    background: white;
+                }
+            }
+        }
+    }
+    ///*导航栏*/
+    .jd_nav {
+        width: 100%;
+        padding: 10px 0;
+        background: white;
+        border-bottom: 1px solid #eee;
+        ul li {
+            width: 25%;
+            height: 68px;
+            float: left;
+            text-align: center;
+            margin-top: 2px;
+            a p {
+                display: block;
+                font-size: 12px;
+                margin: 2px;
+                color: black;
+            }
+            a img {
+                width: 40px;
+            }
+        }
+    }
+    //商品栏
+    //掌上秒杀
+    .product_box {
+        background: white;
+        overflow: hidden;
+        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
+        .product_box_tit {
+            height: 32px;
+            line-height: 32px;
+            .tit1_icon {
+                width: 16px;
+                height: 20px;
+                background: url(../img/seckill-icon.png) no-repeat;
+                background-size: cover;
+                margin-top: 6px;
+            }
+            .tit1_time span {
+                float: left;
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                background: black;
+                color: white;
+                margin-left: 3px;
+                text-align: center;
+                margin-top: 8px;
+                &:nth-child(3n) {
+                    width: 5px;
+                    background: white;
+                    color: black;
+                }
+            }
+            //京东超市1
+            p {
+                padding-left: 20px;
+                color: #666666;
+                font-size: 15px;
+                position: relative;
+                border-bottom: 1px solid #e0e0e0;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: 8.5px;
+                    width: 3px;
+                    height: 15px;
+                    background: rgb(216, 80, 92);
+                }
+            }
+        }
+        .product_box_con {
+            overflow: hidden;
+            width: 100%;
+            ul li {
+                float: left;
+                width: 33.3333%;
+                text-align: center;
+                &:last-child a {
+                    border-right: 0;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    border-right: 1px solid rgb(224, 224, 224);
+                    img {
+                        width: 65%;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    color: red;
+                    padding: 3px 0;
+                }
+                del {
+                    font-size: 12px;
+                    color: grey;
+                }
+            }
+            //京东超市1
+            a[class$="w_50"] {
+                display: block;
+            }
+            a[class$="w_50"]:nth-child(1) {
+                border-right: 1px solid #e0e0e0;
+            }
+            a[class$="w_50"]:nth-child(2) {
+                border-bottom: 1px solid #e0e0e0;
+            }
+            a[class$="w_50"] img {
+                width: 100%;
+            }
+        }
+        //京东超市2
+        a {
+            &[class^="f_right"] {
+                display: block;
+            }
+            &[class^="f_right"]:nth-child(2) {
+                border-left: 1px solid #E0E0E0;
+            }
+            &[class^="f_right"]:nth-child(4) {
+                margin-top: -3px;
+            }
+            &[class^="f_right"] img {
+                width: 100%;
+            }
+        }
+    }
+}
